@@ -12,9 +12,9 @@ authors: [
 ]
 homepage: "https://ocaml.org"
 bug-reports: "https://github.com/samsa1/ocaml/issues"
-dev-repo: "git+https://github.com/samsa1/ocaml.git#5.2+modular-explicit"
+dev-repo: "git+https://github.com/samsa1/ocaml.git#5.3.0+modular-explicit"
 depends: [
-  "ocaml" {= "5.2.0" & post}
+  "ocaml" {= "5.3.0" & post}
   "base-unix" {post}
   "base-bigarray" {post}
   "base-threads" {post}
