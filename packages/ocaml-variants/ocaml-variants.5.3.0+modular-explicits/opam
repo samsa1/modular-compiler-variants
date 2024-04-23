@@ -63,7 +63,7 @@ build: [
 ]
 install: [make "install"]
 url {
-  src: "https://github.com/ocaml/ocaml/archive/trunk.tar.gz"
+  src: "https://github.com/samsa1/ocaml/archive/5.3.0+modular-explicit.tar.gz"
 }
 depopts: [
   "ocaml-option-32bit"
