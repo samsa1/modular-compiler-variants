@@ -10,6 +10,8 @@ opam switch create 5.2.0+modular-explicits --repos modular-variants,default
 
 ## Branch 5.3.0+modular-explicits
 
+### /!\ This version is considerer depreciated and you should consider using the branch presented below
+
 Uses a new syntax
 ```ocaml
 let f
@@ -19,10 +21,29 @@ let f
 
 ## Branch 5.2.0+modular-explicits
 
-Uses the same syntax a first class modules and has less bugs
+Uses the same syntax as first-class modules and has fewer bugs
 
 ```ocaml
 let f
     : (module M : Typ) -> (module Typ) -> M.t -> M.t
     = fun (module M : Typ) (module N : Typ) (x : M.t) = x
 ```
+
+Modular explicit introduce a new type `(module M : S) -> t` where `M` can appear
+in `t`. It is a module dependent arrow.
+
+The types `(module M : S) -> t` and `(module S) -> t` are compatible if `M` does
+not appear in `t`. Thus, modular explicits extend first-class modules by improving
+their expressivity without changing how the user writes functions (this only impact types).
+
+
+## Using this
+
+A small library to help people use modular explicits (with branch `5.2.0+modular-explicits`) can be installed using :
+
+```ocaml
+opam install modexp_lib
+```
+
+An example of printing using this library is available in the example folder.
+More information about this library can also be found on its repository [modexp-stdlib](https://github.com/samsa1/modexp-stdlib).
