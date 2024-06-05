@@ -1,7 +1,7 @@
 # modular-compiler-variants
-This repository exists in order to hold OCaml variants for modular explicit and modular implicit
+This repository exists in order to hold OCaml variants for modular explicits and modular implicit
 
-## Install modular explicit compiler :
+## Install modular explicits compiler :
 
 ```
 opam repo add modular-variants git+https://github.com/samsa1/modular-compiler-variants.git
@@ -29,7 +29,7 @@ let f
     = fun (module M : Typ) (module N : Typ) (x : M.t) = x
 ```
 
-Modular explicit introduce a new type `(module M : S) -> t` where `M` can appear
+Modular explicits introduce a new type `(module M : S) -> t` where `M` can appear
 in `t`. It is a module dependent arrow.
 
 The types `(module M : S) -> t` and `(module S) -> t` are compatible if `M` does

@@ -1,7 +1,8 @@
 opam-version: "2.0"
+version: "5.2.0+modular-explicits"
 license: "LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception"
-synopsis: "Current trunk"
-maintainer: "platform@lists.ocaml.org"
+synopsis: "OCaml development version of modular explicits"
+maintainer: "samuel.vivien@ens.psl.eu"
 authors: [
   "Xavier Leroy"
   "Damien Doligez"
@@ -10,7 +11,7 @@ authors: [
   "Didier Rémy"
   "Jérôme Vouillon"
 ]
-homepage: "https://ocaml.org"
+homepage: "https://github.com/samsa1/ocaml"
 bug-reports: "https://github.com/samsa1/ocaml/issues"
 dev-repo: "git+https://github.com/samsa1/ocaml.git#5.2.0+modular-explicit"
 depends: [
@@ -21,11 +22,9 @@ depends: [
   "base-domains" {post}
   "base-nnp" {post}
   "ocaml-option-bytecode-only" {arch != "arm64" & arch != "x86_64" & arch != "s390x" & arch != "riscv64" & arch != "ppc64"}
-  "ocaml-beta" {opam-version < "2.1.0"}
 ]
 conflict-class: "ocaml-core-compiler"
-flags: [ compiler avoid-version ]
-setenv: CAML_LD_LIBRARY_PATH = "%{lib}%/stublibs"
+flags: compiler
 build-env: [
   [LSAN_OPTIONS = "detect_leaks=0,exitcode=0"]
   [ASAN_OPTIONS = "detect_leaks=0,exitcode=0"]
