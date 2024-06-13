@@ -8,6 +8,11 @@ opam repo add modular-variants git+https://github.com/samsa1/modular-compiler-va
 opam switch create 5.2.0+modular-explicits --repos modular-variants,default
 ```
 
+To have modular explicit and type arguments for modules, use the branch :
+```
+opam switch create 5.2.0+modexp+typearg --repos modular-variants,default
+```
+
 ## Branch 5.3.0+modular-explicits
 
 ### /!\ This version is considerer depreciated and you should consider using the branch presented below
