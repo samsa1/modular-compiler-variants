@@ -13,6 +13,12 @@ To have modular explicit and type arguments for modules, use the branch :
 opam switch create 5.2.0+modexp+typearg --repos modular-variants,default
 ```
 
+For testing modular implicits prototype :
+```
+opam switch create 5.2.0+dev+modular-implicits --repos modular-variants,default
+```
+
+
 ## Branch 5.3.0+modular-explicits
 
 ### /!\ This version is considerer depreciated and you should consider using the branch presented below
